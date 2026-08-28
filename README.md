@@ -207,7 +207,7 @@ sections.
 -   **React** --- Component-based UI architecture
 -   **JavaScript / JSX** --- Application logic and component development
 -   **HTML5** --- Semantic page structure
--   **CSS3** --- Responsive styling and visual system
+-   **Tailwind CSS** --- Responsive styling and visual system
 
 ### Recommended Development Environment
 
@@ -218,128 +218,6 @@ sections.
 
 > If the project uses a different React build tool, update the commands
 > in the installation section accordingly.
-
-------------------------------------------------------------------------
-
-## 📁 Suggested Project Structure
-
-A scalable component architecture can follow this structure:
-
-``` text
-src/
-├── assets/
-│   ├── images/
-│   ├── icons/
-│   └── fonts/
-│
-├── components/
-│   ├── Hero/
-│   │   └── Hero.jsx
-│   │
-│   ├── Problem/
-│   │   └── Problem.jsx
-│   │
-│   ├── Benefits/
-│   │   └── Benefits.jsx
-│   │
-│   ├── WhyChooseUs/
-│   │   └── WhyChooseUs.jsx
-│   │
-│   ├── Trust/
-│   │   └── Trust.jsx
-│   │
-│   ├── Offer/
-│   │   └── Offer.jsx
-│   │
-│   ├── OrderForm/
-│   │   └── OrderForm.jsx
-│   │
-│   ├── FinalCTA/
-│   │   └── FinalCTA.jsx
-│   │
-│   └── common/
-│       ├── Button.jsx
-│       ├── SectionHeading.jsx
-│       └── Container.jsx
-│
-├── data/
-│   ├── products.js
-│   └── content.js
-│
-├── App.jsx
-├── main.jsx
-└── index.css
-│
-├── public/
-│   └── images/
-│
-├── package.json
-└── README.md
-```
-
-The exact structure can be adapted to the current implementation.
-
-------------------------------------------------------------------------
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-Make sure you have installed:
-
--   Node.js 18+
--   npm 9+
-
-Check your versions:
-
-``` bash
-node -v
-npm -v
-```
-
-### 1. Clone the repository
-
-``` bash
-git clone <your-repository-url>
-```
-
-### 2. Enter the project directory
-
-``` bash
-cd <project-directory>
-```
-
-### 3. Install dependencies
-
-``` bash
-npm install
-```
-
-### 4. Start the development server
-
-For a Vite-based React project:
-
-``` bash
-npm run dev
-```
-
-The application will normally be available at:
-
-``` text
-http://localhost:5173
-```
-
-### 5. Create a production build
-
-``` bash
-npm run build
-```
-
-### 6. Preview the production build
-
-``` bash
-npm run preview
-```
 
 ------------------------------------------------------------------------
 
@@ -422,14 +300,6 @@ Recommended practices:
 -   Prefer local/preloaded fonts where appropriate
 -   Avoid loading unnecessary font families
 
-### Production
-
-Always verify the production build before deployment:
-
-``` bash
-npm run build
-```
-
 ------------------------------------------------------------------------
 
 ## ♿ Accessibility
@@ -457,41 +327,6 @@ is preferable to using a clickable `<div>` for an action.
 
 ------------------------------------------------------------------------
 
-## 🔄 CTA / Scroll Architecture
-
-Because multiple sections contain an order CTA, the page should use a
-single source of truth for the order destination.
-
-For example:
-
-``` jsx
-const scrollToOrder = () => {
-  document
-    .getElementById("order")
-    ?.scrollIntoView({ behavior: "smooth" });
-};
-```
-
-Then reusable CTA buttons can trigger the same action:
-
-``` jsx
-<button onClick={scrollToOrder}>
-  অর্ডার করুন
-</button>
-```
-
-And the order section can expose:
-
-``` jsx
-<section id="order">
-  {/* Order Form */}
-</section>
-```
-
-This keeps navigation behavior consistent across the entire landing
-page.
-
-------------------------------------------------------------------------
 
 ## 🧩 Component Philosophy
 
@@ -640,82 +475,8 @@ Before deploying the landing page, verify:
 
 ------------------------------------------------------------------------
 
-## 🌐 Deployment
 
-This project can be deployed to modern frontend hosting platforms such
-as:
 
--   Vercel
--   Netlify
--   Cloudflare Pages
--   GitHub Pages
-
-For Vercel, the typical workflow is:
-
-``` text
-GitHub Repository
-       ↓
-    Vercel
-       ↓
-Production Deployment
-```
-
-A typical production build command is:
-
-``` bash
-npm run build
-```
-
-The output directory depends on the project's build tool. For Vite, it
-is normally:
-
-``` text
-dist/
-```
-
-------------------------------------------------------------------------
-
-## 📸 Project Preview
-
-Add the project screenshot to the repository, for example:
-
-``` text
-docs/
-└── landing-page-preview.png
-```
-
-Then reference it in this README:
-
-``` markdown
-![Landing Page Preview](docs/landing-page-preview.png)
-```
-
-This makes the repository immediately understandable to clients,
-collaborators, and recruiters.
-
-------------------------------------------------------------------------
-
-## 🧱 Future Improvements
-
-Potential upgrades for the project:
-
--   [ ] Backend order API integration
--   [ ] Order confirmation page
--   [ ] WhatsApp order notification
--   [ ] Meta Pixel event tracking
--   [ ] Meta Conversions API
--   [ ] Google Analytics integration
--   [ ] Dynamic product/package configuration
--   [ ] CMS-based content management
--   [ ] Customer review section
--   [ ] FAQ accordion
--   [ ] Sticky mobile CTA
--   [ ] A/B testing for hero copy
--   [ ] A/B testing for offers
--   [ ] Loading skeletons
--   [ ] Advanced form analytics
-
-------------------------------------------------------------------------
 
 ## 💡 Why This Landing Page Is Structured This Way
 
@@ -795,8 +556,8 @@ issue or contact the project owner.
 
 ------------------------------------------------------------------------
 
-::: {align="center"}
-### Built with React ❤️
+
+### Built with ❤️ By Md Shahin
 
 **Premium UI • Clean Architecture • Conversion-Focused UX**
 :::
