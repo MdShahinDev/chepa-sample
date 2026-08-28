@@ -339,14 +339,16 @@ For example:
 function App() {
   return (
     <>
-      <Hero />
-      <Problem />
-      <Benefits />
-      <WhyChooseUs />
-      <Trust />
-      <Offer />
-      <OrderForm />
-      <FinalCTA />
+      <Navbar/>
+      <HeroSection/>
+      <ProblemSection/>
+      <ProductIntroSection/>
+      <WhyOurChapaSection/>
+      <TrustSection />
+      <UrgencySection/>
+      <FinalCtaSection/>
+      <OrderForm/>
+      <CookingTipsSection/>
     </>
   );
 }
